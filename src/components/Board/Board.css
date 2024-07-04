@@ -1,0 +1,36 @@
+.Board__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.Board__title {
+  font-size: 35px;
+  z-index: 2; /* incase the box-shadow is hitting the title from the cards */
+  margin-bottom: 40px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.42);
+  background: linear-gradient(
+    180deg,
+    #fff 40%,
+    rgba(255, 255, 255, 0.25) 108.33%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.Board__lanes__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}

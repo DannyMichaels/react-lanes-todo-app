@@ -1,0 +1,61 @@
+.Button,
+.Button:link,
+.Button:visited {
+  /* text-transform: uppercase; */
+  text-decoration: none;
+  padding: var(--button-padding);
+  /* display: inline-block; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  transition: all 0.2s;
+  position: relative;
+  font-size: var(--font-size);
+  border: none;
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  font-family: 'Inter', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 100%;
+}
+
+.Button:focus {
+  outline: none;
+}
+
+.Button:disabled {
+  cursor: not-allowed;
+  background-color: #999999;
+}
+
+.Button:hover {
+  transform: translateY(var(--hover-translate-y));
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.Button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  background-color: var(--effect-background-color);
+  z-index: -1;
+  transition: all var(--transition-duration);
+}
+
+.Button:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  background-color: transparent;
+  opacity: 0;
+}
+
+.Button:active {
+  transform: translateY(var(--active-translate-y));
+}

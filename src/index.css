@@ -1,0 +1,52 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* should move to SCSS eventually */
+  --background-color: #000;
+  --effect-background-color: #762ef2;
+  --primary-text-color: #ffffff;
+  --active-translate-y: 1px;
+  --hover-translate-y: -3px;
+  --button-padding: 5px;
+  --font-size: 1rem;
+  --border-radius: 12px;
+  --transition-duration: 1s;
+  --linear-gradient-border: linear-gradient(
+    to right,
+    rgba(118, 46, 242, 0.1),
+    rgba(118, 46, 242, 0.15),
+    rgba(118, 46, 242, 0.6),
+    rgba(118, 46, 242, 1)
+  );
+}
+
+/* Define the scrollbar styles */
+::-webkit-scrollbar {
+  width: 0.4em;
+  border-radius: 16px;
+}
+
+/* Define the scrollbar thumb styles */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  outline: #323232 solid 0.5px;
+}

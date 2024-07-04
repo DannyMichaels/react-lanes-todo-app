@@ -1,0 +1,43 @@
+.LaneItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 5px;
+  width: 100%;
+  background-clip: padding-box;
+  border-radius: var(--border-radius);
+  border: 1px solid #323232;
+  z-index: 1;
+  /* when holding it and dragging over an item it will glassmorph it */
+  backdrop-filter: blur(8px);
+  background: var(--linear-gradient-border);
+}
+
+.LaneItem__delete {
+  height: 100%;
+  display: flex;
+}
+
+.LaneItem__delete > button {
+  cursor: pointer;
+  background: rgba(255, 0, 0, 0.8);
+  color: #fff;
+  border: none;
+  padding: 7px 11px;
+  margin: 0;
+  border-radius: var(--border-radius);
+  transition: background 0.3s ease-in-out;
+}
+
+.LaneItem__delete > button:hover {
+  background: #f44;
+}
+
+.LaneItem--dragging {
+  /* background: pink; */
+}
+
+.LaneItem--inactive {
+  opacity: 0.5;
+}
