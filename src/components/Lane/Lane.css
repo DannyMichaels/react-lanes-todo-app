@@ -5,8 +5,8 @@
   --box-shadow: 0 2px 50px 20px;
   --box-shadow-color: 74, 14, 102;
   --pulsating-speed: 1.2s;
-  --lane-background: #000;
-  --lane-color: #fff;
+  --lane-background: #fff;
+  --lane-color: #000;
   --lane-border: 1px solid rgba(255, 255, 255, 0.2);
   --lane-border-radius: 12px;
   --padding: 10px;
@@ -40,7 +40,7 @@
   border-radius: var(--lane-border-radius);
   box-shadow: var(--box-shadow)
     rgba(var(--box-shadow-color), var(--initial-opacity));
-  animation: boxShadow-pulse var(--pulsating-speed) infinite;
+  animation: float 3s infinite;
   overflow: hidden;
 }
 
