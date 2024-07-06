@@ -56,7 +56,10 @@ export default function useBoard(lanes) {
 
   const handleOnDragEnd = useCallback(
     (result) => {
-      if (!result.destination) return;
+      if (!result.destination) {
+         setIsDragging(false);
+         return;
+      };
 
       const updatedLanes = moveBoardItem(
         boardState.lanes,
